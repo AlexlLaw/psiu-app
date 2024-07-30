@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "psiu-app",
+    "slug": "psiu-app",
+    "version": "1.0.0",
+    "extra": {
+      "eas": {
+        "projectId": "a99086df-0d77-4f99-9e88-8f785308c6b1"
+      }
+    }
+  }
+}
