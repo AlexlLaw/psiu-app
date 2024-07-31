@@ -66,6 +66,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
               </imageView>
             </subviews>
+            <color key="backgroundColor" red="0.090196080000000004" green="0.10588235400000001" blue="0.18039216100000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
               <constraint firstItem="EXPO-SplashScreenBackground" firstAttribute="top" secondItem="EXPO-ContainerView" secondAttribute="top" id="1gX-mQ-vu6"/>
               <constraint firstItem="EXPO-SplashScreenBackground" firstAttribute="leading" secondItem="EXPO-ContainerView" secondAttribute="leading" id="6tX-OG-Sck"/>
