@@ -1,17 +1,28 @@
 {
   "expo": {
     "name": "Psiu Eventos",
-    "slug": "Psiu Eventos",
+    "slug": "testapk",
+    "privacy": "public",
+    "sdkVersion": "36.0.0",
+    "plataform": [
+      "ios",
+      "android"
+    ],
     "version": "1.0.0",
+    "orientation": "portrait",
     "splash": {
       "image": "./assets/splashscreen.png",
       "resizeMode": "contain",
       "backgroundColor": "#171B2E"
     },
-    "extra": {
-      "eas": {
-        "projectId": "a99086df-0d77-4f99-9e88-8f785308c6b1"
-      }
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTabler": true
     }
   }
 }
