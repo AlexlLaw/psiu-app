@@ -3,7 +3,6 @@
     "name": "Psiu Eventos",
     "slug": "testapk",
     "privacy": "public",
-    "sdkVersion": "36.0.0",
     "plataform": [
       "ios",
       "android"

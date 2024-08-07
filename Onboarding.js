@@ -21,11 +21,16 @@ export function Onboarding({ navigation }) {
               Experiência Memorável. Conhecimento Único Networking Para a Vida. Nossa missão é te manter aprendendo a vida toda, pois conhecimento nunca é demais!
             </Text>
             <View style={styles.buttons}>
-            <TouchableOpacity style={[styles.button, styles.primaryButton]} onPress={() => navigation.navigate('WebViewScreen', { url: 'https://main.d1rf1wevxlksyb.amplifyapp.com/auth/cadastrar' })}>
+              <TouchableOpacity style={[styles.button, styles.primaryButton]} onPress={() => navigation.navigate('WebViewScreen', { url: 'https://main.d1rf1wevxlksyb.amplifyapp.com/auth/cadastrar' })}>
                 <Text style={styles.buttonText}>Cadastrar</Text>
               </TouchableOpacity>
               <TouchableOpacity style={[styles.button, styles.secondaryButton]} onPress={() => navigation.navigate('WebViewScreen', { url: 'https://main.d1rf1wevxlksyb.amplifyapp.com/auth/login' })}>
                 <Text style={[styles.buttonText, styles.secondaryButtonText]}>Entrar</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={[styles.buttons, styles.tertiaryContent]}>
+              <TouchableOpacity style={[styles.button, styles.tertiaryButton]} onPress={() => navigation.navigate('WebViewScreen', { url: 'https://main.d1rf1wevxlksyb.amplifyapp.com/auth/login/guest' })}>
+                <Text style={[styles.buttonText, styles.secondaryButtonText]}>Convidado</Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -93,4 +98,15 @@ const styles = StyleSheet.create({
   secondaryButtonText: {
     color: '#1A1A1A',
   },
+  tertiaryButtonText: {
+    color: 'e5e5e5',
+  },
+  tertiaryButton: {
+    backgroundColor: '#e5e5e5',
+    borderWidth: 1,
+    borderColor: '#1E233A'
+  },
+  tertiaryContent: {
+    padding: 8
+  }
 });
