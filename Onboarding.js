@@ -3,12 +3,18 @@ import { View, Text, ImageBackground, StyleSheet, TouchableOpacity } from 'react
 import { LinearGradient } from 'expo-linear-gradient';
 
 export function Onboarding({ navigation }) {
-
   return (
-    <ImageBackground
-      source={{ uri: 'https://s3-alpha-sig.figma.com/img/65ec/b6ec/e9b72156c5e9b735154b066b51f9ea76?Expires=1723420800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UUa4YqXMmuYSZWem5OmamvcoSh0mkDNUlnNkPjG2yje2eh4S~-C4jpqDO4T~5oo-zHrmas2WNBHKoyI1d-6DbHA4pciutM55KvvXvt~2dpoM4Sk39eW9bQDGX3M~UAHJtV7J61RnXTSP~4UOn3cyztz1CiKoa5Q7SRX2uH0szn7AKzZmPTR2b-yjDs7zzvm~l1cWp5wInId83mcQB7qrDfYQds-Na6qgQheNJheLIHR9lCSaaKMb9g7fT6fl8F7C2-DK34UTfwS3~C0EuMSzfh3tCPSWZjYNOZyWQ5od~322flX7l35~0AsIYWJZcioKrmAILkvOuYRgUKTQ6cW9Tw__' }} // substitua pelo URL da sua imagem
-      style={styles.background}
-    >
+    <View style={styles.background}>
+      <ImageBackground
+        source={{ uri: 'https://semaluguel-images.s3.us-east-2.amazonaws.com/FRMI/Event/capa.jpg' }} // substitua pelo URL da sua imagem
+        style={styles.background}
+      >
+      <LinearGradient
+        colors={['rgba(0,0,0,0)', '#171B2E']} // Gradiente transparente para azul
+        locations={[0.7, 1]}
+        style={styles.gradientOverlay}
+      />
+      </ImageBackground>
       <View style={styles.overlay}>
         <LinearGradient
           colors={['rgba(23, 27, 46, 0.6)', 'rgba(23, 27, 46, 0)', '#171B2E']}
@@ -22,21 +28,21 @@ export function Onboarding({ navigation }) {
             </Text>
             <View style={styles.buttons}>
               <TouchableOpacity style={[styles.button, styles.primaryButton]} onPress={() => navigation.navigate('WebViewScreen', { url: 'https://main.d1rf1wevxlksyb.amplifyapp.com/auth/cadastrar' })}>
-                <Text style={styles.buttonText}>Cadastrar</Text>
+                <Text style={styles.buttonText}>Não tenho cadastro</Text>
               </TouchableOpacity>
               <TouchableOpacity style={[styles.button, styles.secondaryButton]} onPress={() => navigation.navigate('WebViewScreen', { url: 'https://main.d1rf1wevxlksyb.amplifyapp.com/auth/login' })}>
-                <Text style={[styles.buttonText, styles.secondaryButtonText]}>Entrar</Text>
+                <Text style={[styles.buttonText, styles.secondaryButtonText]}>Já tenho cadastro</Text>
               </TouchableOpacity>
             </View>
             <View style={[styles.buttons, styles.tertiaryContent]}>
               <TouchableOpacity style={[styles.button, styles.tertiaryButton]} onPress={() => navigation.navigate('WebViewScreen', { url: 'https://main.d1rf1wevxlksyb.amplifyapp.com/auth/login/guest' })}>
-                <Text style={[styles.buttonText, styles.secondaryButtonText]}>Convidado</Text>
+                <Text style={[styles.buttonText, styles.secondaryButtonText]}>Entrar sem cadastro</Text>
               </TouchableOpacity>
             </View>
           </View>
         </LinearGradient>
       </View>
-    </ImageBackground>
+    </View>
   );
 };
 
@@ -47,10 +53,14 @@ const styles = StyleSheet.create({
   overlay: {
     flex: 1,
     justifyContent: 'flex-end',
+    backgroundColor: '#171B2E',
   },
   gradient: {
     flex: 1,
     justifyContent: 'flex-end',
+  },
+  gradientOverlay: {
+    flex: 1,
   },
   content: {
     padding: 20,
@@ -87,7 +97,7 @@ const styles = StyleSheet.create({
     borderColor: '#1E233A',
   },
   secondaryButton: {
-    backgroundColor: '#FFB300',
+    backgroundColor: '#F69D28',
   },
   buttonText: {
     color: '#fff',
